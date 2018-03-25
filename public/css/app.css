@@ -1,0 +1,134 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+  background-image: url("./img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: inset 0 0 0 1000px rgba(50, 70, 155, .7);
+}
+
+.contentContainer {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 8fr 1fr;
+  height: 100vh;
+  grid-template-areas:
+    "navMenu      navMenu   navMenu"
+    "sidebarLeft  content   sidebarRight"
+    "sidebarLeft  content   sidebarRight"
+    "sidebarLeft  content   sidebarRight"
+    "footer       footer    footer"
+}
+
+.navMenu {
+  grid-area: navMenu;
+  margin: 0px 10px 0px;
+  background: #292b2c;
+}
+
+.sidebarLeft {
+  grid-area: sidebarLeft;
+}
+
+.navArrowLeft {
+  height: 10px;
+  width: 10px;
+}
+
+.content {
+  padding-top: 20px;
+  grid-area: content;
+}
+
+.welcome {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 500;
+  margin-top: 5vh;
+}
+
+.clickBelow {
+  color: white;
+  display: block;
+  max-width: 90vw;
+  text-align: center;
+  font-size: 30px;
+  margin: 6vh auto;
+}
+
+.buttonDiv {
+  display: block;
+  margin: auto;
+}
+
+.enter {
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: 30px;
+  color: white;
+  border: 2px solid white;
+  display: block;
+  padding: 20px;
+  margin: auto;
+}
+
+.sidebarRight {
+  grid-area: sidebarRight;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #292b2c;
+}
+
+
+@media (max-width: 700px) {
+
+  .contentContainer {
+    background-image: url("./img/bgMobile.jpg");
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(50, 70, 155, .7);
+    background-size: 100% 100%;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 12fr;
+    grid-template-rows: 1fr 10fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    grid-template-areas:
+      "navMenu"
+      "content"
+      "footer"
+  }
+
+  .navMenu {
+    margin: 0;
+  }
+
+  .sidebarLeft, .sidebarRight{
+    display: none;
+  }
+
+  .content {
+    width: 100vw;
+  }
+
+  .welcome {
+    font-size: 7vw;
+  }
+
+  .clickBelow {
+    font-size: 5vw;
+  }
+
+  .enter {
+    font-size: 5vw;
+  }
+}

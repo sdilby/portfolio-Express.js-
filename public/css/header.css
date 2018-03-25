@@ -1,0 +1,69 @@
+.menuBar {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  max-height: 2vh;
+  width: 100%;
+  grid-template-areas:
+    "devName  .  .  .  .  about  contact  projects  blog"
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited{
+  color: white;
+}
+
+a:hover {
+  color: #7f7f7f;
+}
+
+
+
+.devName {
+  grid-area: devName;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0px 0px 10px;
+}
+
+.about, .contact, .projects, .blog {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 3vh 10px 0px 20px;
+}
+
+.about {
+  grid-area: about;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.blog {
+  grid-area: blog;
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+
+  .devName {
+    font-size: 5vw;
+  }
+
+  .jobTitle {
+    display: none;
+  }
+}
