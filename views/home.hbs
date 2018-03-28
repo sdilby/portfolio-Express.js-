@@ -2,12 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Help Page</title>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/components-font-awesome/css/fontawesome.min.css" />
+    <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <script src="/jquery/dist/jquery.min.js"></script>
   </head>
   <body>
-    {{> header}}
-    <p>{{screamIt welcomeMessage}}</p>
+    <div class="app">
+        <div class="contentContainer">
+          <div class="navMenu">
+            {{> header}}
+          </div>
+          <div class="sidebarLeft">
+            <!--Add sidebarLeft variable for navigation -->
+          </div>
+          <div class="content">
+            <div>
+              <p class="welcome"> Welcome to my portfolio page. </p>
+              <p class="clickBelow"> I've been learning Javascript, Python, and Spanish for 7 months
+                while living abroad in Mexico.</p>
+            <div class="buttonDiv">
+              <a href="/projects">
+                <button class="enter" size="lg">Come take a look</button>
+              </a>
+            </div>
+          </div>
+          </div>
+          <div class="sidebarRight">
+            <!--Add sidebarRight variable for navigation -->
+          </div>
+          <div class="footer">
+            {{> footer}}
+          </div>
+        </div>
 
-    {{> footer}}
+    </div>
   </body>
+    <script src="/bootstrap/dist/bootstrap.min.js"></script>
+    <script src="/popper.js/dist/popper.min.js"></script>
 </html>
