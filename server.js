@@ -29,8 +29,15 @@ app.set('view engine', 'hbs');
 //  res.render('maintenance.hbs');
 //});
 
+// Set public page for static components. Add npm dependencies
+
 app.use(express.static(path.join(__dirname + '/public')));
-app.use(express.static(path.join(__dirname, 'bower_components')));
+//app.use(express.static(path.join(__dirname + '/node_modules')));
+app.use(express.static(__dirname + '/node_modules/bootstrap/dist/'));
+app.use(express.static(__dirname + '/node_modules/jquery/dist/'));
+app.use(express.static(__dirname + '/node_modules/font-awesome/'));
+app.use(express.static(__dirname + '/node_modules/popper.js/dist/'));
+
 
 hbs.registerHelper('getCurrentYear', () => {
   return new Date().getFullYear()

@@ -1,0 +1,62 @@
+.iconsBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  height: 100%;
+  grid-template-areas:
+    ".  columnTwo columnFour  columnSix  ."
+    ". developedBy developedBy developedBy ."
+}
+
+.columnTwo{
+  grid-area: columnTwo;
+  display: block;
+  margin: auto;
+}
+
+.fa-github {
+  color: #4078c0;
+}
+
+.columnFour{
+  grid-area: columnFour;
+  display: block;
+  margin: auto;
+}
+
+.fa-free-code-camp {
+  color: #006400;
+}
+
+.columnSix{
+  grid-area: columnSix;
+  display: block;
+  margin: auto
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.developedBy {
+  grid-area: developedBy;
+  display: block;
+  margin: auto;
+  color: rgba(255,255,255,.5);
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+
+  .iconsBar {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+      "columnTwo  columnFour  columnSix"
+      "developedBy developedBy developedBy"
+  }
+}

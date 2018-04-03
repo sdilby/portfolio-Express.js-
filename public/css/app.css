@@ -64,18 +64,12 @@ body {
   margin: 6vh auto;
 }
 
-.buttonDiv {
-  display: block;
-  margin: auto;
-}
-
-.enter {
+#enter {
   text-transform: uppercase;
   background-color: transparent;
   font-size: 30px;
   color: white;
   border: 2px solid white;
-  display: block;
   padding: 20px;
   margin: auto;
 }
@@ -122,6 +116,7 @@ body {
   }
 
   .welcome {
+    margin-top: 1vh;
     font-size: 7vw;
   }
 
@@ -129,7 +124,7 @@ body {
     font-size: 5vw;
   }
 
-  .enter {
+  #enter {
     font-size: 5vw;
   }
 }
