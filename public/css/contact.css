@@ -5,13 +5,6 @@ body {
     padding: 0;
 }
 
-.app {
-  background-image: url("./img/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  box-shadow: inset 0 0 0 1000px rgba(50, 70, 155, .6);
-}
-
 .contentContainer {
   display: grid;
   grid-gap: 15px;
@@ -29,9 +22,8 @@ body {
 .navMenu {
   grid-area: navMenu;
   margin: 0px 10px 0px;
-  background: #322a61;
+  background: #292b2c;
   height: 100%;
-  border-radius: 0px 0px 10px 10px;
 }
 
 .sidebarLeft {
@@ -48,50 +40,20 @@ body {
   grid-area: content;
 }
 
-.welcome {
-  color: white;
-  text-align: center;
-  font-size: 60px;
-  font-weight: 500;
-  margin-top: 5vh;
-}
-
-.clickBelow {
-  color: white;
-  display: block;
-  max-width: 90vw;
-  text-align: center;
-  font-size: 30px;
-  margin: 6vh auto;
-}
-
-#enter {
-  text-transform: uppercase;
-  background-color: transparent;
-  font-size: 30px;
-  color: white;
-  border: 2px solid white;
-  padding: 20px;
-  margin: auto;
-}
-
 .sidebarRight {
   grid-area: sidebarRight;
 }
 
 .footer {
   grid-area: footer;
-  background: #322a61;
+  background-color: #292b2c;
 }
+
 
 
 @media (max-width: 768px) {
 
   .contentContainer {
-    background-image: url("./img/bgMobile.jpg");
-    background-repeat: no-repeat;
-    box-shadow: inset 0 0 0 1000px rgba(50, 70, 155, .6);
-    background-size: 100% 100%;
     display: grid;
     grid-gap: 0;
     grid-template-columns: 12fr;
@@ -115,17 +77,3 @@ body {
   .content {
     width: 100vw;
   }
-
-  .welcome {
-    margin-top: 1vh;
-    font-size: 7vw;
-  }
-
-  .clickBelow {
-    font-size: 5vw;
-  }
-
-  #enter {
-    font-size: 5vw;
-  }
-}

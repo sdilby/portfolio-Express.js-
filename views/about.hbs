@@ -3,10 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>About Me</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/about.css" />
   </head>
   <body>
-    {{> header}}
-    <p> Yo </p>
-    {{> footer}}
+    <div class="app">
+      <div class="contentContainer">
+        <div class="navMenu">
+          {{> header}}
+        </div>
+        <div class="sidebarLeft">
+          <!--Add sidebarLeft variable for navigation -->
+        </div>
+        <div class="content jumbotron">
+            <div class="container">
+              <div class="description">
+                <h1>Hi, I'm Steven. </h1>
+                <br>
+                <h4>I'm a former Environmental, Health and Safety Professional.</h4>
+                <br>
+                <h4>I've worked with large construction companies, a national nuclear laboratory, and in the
+                    fields of marine and mining safety. </h4>
+                <br>
+                <h4>In September 2017, I moved with my girlfriend (now fiancee <i class="fa fa-smile-o" aria-hidden="true"></i> )
+                      to Chetumal, Mexico while she studies lion fish for nine months on a Fulbright Post-Doc.
+                      There aren't many safety jobs here, so in between traveling the country
+                      and tackling house/car problems, I use my time to learn and volunteer.
+                      I've been using freeCodeCamp, Udemy,
+                      Udacity, and other online resources to teach myself web development.</h4>
+                      <br>
+                  <h4>I've been focusing on Javascript and Python. When I'm not coding,
+                      I study Spanish at the local university.</h4>
+              </div>
+              <div class="profilePicture">
+                <img src="css/img/profile.jpg" class="rounded-circle" alt="Decent Looking Guy">
+                <p>Merida, Mexico</p>
+              </div>
+            </div>
+        </div>
+          <div class="sidebarRight">
+            <!--Add sidebarRight variable for navigation -->
+          </div>
+        <div class="footer">
+          {{> footer}}
+        </div>
+      </div>
+    </div>
+
+    </div>
   </body>
+  <script language="javascript" src="js/bootstrap.min.js"></script>
+  <script language="javascript" src="jquery.min.js"></script>
+  <script language="javascript" src="popper.min.js"></script>
 </html>

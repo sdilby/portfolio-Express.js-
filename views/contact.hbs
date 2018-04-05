@@ -2,12 +2,40 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Help Page</title>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
   </head>
   <body>
-    {{> header}}
-    <p>Hey hey</p>
-
-    {{> footer}}
+    <div class="app">
+      <div class="contentContainer">
+        <div class="navMenu">
+          {{> header}}
+        </div>
+        <div class="sidebarLeft">
+          <!--Add sidebarLeft variable for navigation -->
+        </div>
+        <div class="content">
+          <div>
+            <p class="welcome"> Welcome to my portfolio page. </p>
+            <p class="clickBelow"> I've been learning Javascript, Python, and Spanish for 7 months
+              while living abroad in Mexico.</p>
+            <div class="d-flex justify-content-center">
+              <a class="btn" id="enter" href="/projects" size="lg" type="button">Come take a look</a>
+            </div>
+          </div>
+        </div>
+          <div class="sidebarRight">
+            <!--Add sidebarRight variable for navigation -->
+          </div>
+        <div class="footer">
+          {{> footer}}
+        </div>
+      </div>
+    </div>
   </body>
+  <script language="javascript" src="js/bootstrap.min.js"></script>
+  <script language="javascript" src="jquery.min.js"></script>
+  <script language="javascript" src="popper.min.js"></script>
 </html>
