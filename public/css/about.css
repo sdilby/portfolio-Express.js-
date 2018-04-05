@@ -85,6 +85,7 @@ p {
   .contentContainer {
     display: grid;
     grid-gap: 0;
+    background-color: white;
     grid-template-columns: 12fr;
     grid-template-rows: 1fr 10fr 1fr;
     height: 100vh;
@@ -93,6 +94,23 @@ p {
       "navMenu"
       "content"
       "footer"
+  }
+
+  .container {
+    display: grid;
+    background-color: #eeeeee;
+    grid-gap: 0px;
+    grid-template-columns: 12fr;
+    grid-template-rows: auto;
+    height: 100%;
+    grid-template-areas:
+      "description"
+      "."
+      "profilePicture"
+  }
+
+  h4 {
+    text-align: left;
   }
 
   .navMenu {

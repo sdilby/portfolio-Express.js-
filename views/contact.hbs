@@ -5,7 +5,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact.css" />
   </head>
   <body>
     <div class="app">
@@ -16,14 +16,24 @@
         <div class="sidebarLeft">
           <!--Add sidebarLeft variable for navigation -->
         </div>
-        <div class="content">
-          <div>
-            <p class="welcome"> Welcome to my portfolio page. </p>
-            <p class="clickBelow"> I've been learning Javascript, Python, and Spanish for 7 months
-              while living abroad in Mexico.</p>
-            <div class="d-flex justify-content-center">
-              <a class="btn" id="enter" href="/projects" size="lg" type="button">Come take a look</a>
-            </div>
+        <div class="content jumbotron">
+          <div class="container">
+            <h1 class="text-center text-uppercase font-bold contactMe">contact me</h1>
+            <p class="text-center font-italic">If my internet works, I'll email you back. Gracias.</p>
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email subject</label>
+                <input type="subject" class="form-control" id="exampleFormControlInput1" placeholder="Can I offer you a job?">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">What's on your mind?</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Did you really match your shirt and your hat? That's.. uhh.. bold."></textarea>
+              </div>
+            </form>
           </div>
         </div>
           <div class="sidebarRight">
