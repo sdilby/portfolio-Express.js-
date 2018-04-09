@@ -32,7 +32,6 @@ app.set('view engine', 'hbs');
 // Set public page for static components. Add npm dependencies
 
 app.use(express.static(path.join(__dirname + '/public')));
-//app.use(express.static(path.join(__dirname + '/node_modules')));
 app.use(express.static(__dirname + '/node_modules/bootstrap/dist/'));
 app.use(express.static(__dirname + '/node_modules/jquery/dist/'));
 app.use(express.static(__dirname + '/node_modules/font-awesome/'));
@@ -43,9 +42,6 @@ hbs.registerHelper('getCurrentYear', () => {
   return new Date().getFullYear()
 });
 
-//hbs.registerHelper('screamIt', (text) => {
-//  return text.toUpperCase()
-//});
 
 // Example of variables that can be used on specific pages with {{variableName}}
 // creates key value pairs to make variables

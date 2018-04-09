@@ -5,7 +5,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link rel="stylesheet" type="text/css" href="css/projects.css" />
   </head>
   <body>
     <div class="app">
@@ -16,13 +16,27 @@
         <div class="sidebarLeft">
           <!--Add sidebarLeft variable for navigation -->
         </div>
-        <div class="content">
-          <div>
-            <p class="welcome"> Welcome to my portfolio page. </p>
-            <p class="clickBelow"> I've been learning Javascript, Python, and Spanish for 7 months
-              while living abroad in Mexico.</p>
-            <div class="d-flex justify-content-center">
-              <a class="btn" id="enter" href="/projects" size="lg" type="button">Come take a look</a>
+        <div class="content jumbotron jumbotron-fluid">
+          <h2 class="text-center">My Projects</h2>
+          <br>
+          <div id="projectsGrid">
+            <div>
+              {{>projectCard}}
+            </div>
+            <div>
+              {{>projectCard}}
+            </div>
+            <div>
+              {{>projectCard}}
+            </div>
+            <div>
+              {{>projectCard}}
+            </div>
+            <div>
+              {{>projectCard}}
+            </div>
+            <div>
+              {{>projectCard}}
             </div>
           </div>
         </div>

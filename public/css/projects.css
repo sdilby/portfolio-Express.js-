@@ -22,7 +22,7 @@ body {
 .navMenu {
   grid-area: navMenu;
   margin: 0px 10px 0px;
-  background: #292b2c;
+  background: #322a61;
   height: 100%;
 }
 
@@ -36,8 +36,26 @@ body {
 }
 
 .content {
-  padding-top: 20px;
+  padding-top: 0px;
   grid-area: content;
+}
+
+.jumbotron {
+  margin-top: 0px;
+  padding: 10px 0px 0px 0px !important;
+}
+
+#projectsGrid {
+  display: grid;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 18rem));
+  justify-content: center;
+}
+
+.item {
+  border: 2px solid black;
 }
 
 .sidebarRight {
@@ -46,7 +64,7 @@ body {
 
 .footer {
   grid-area: footer;
-  background-color: #292b2c;
+  background-color: #322a61;
 }
 
 
@@ -76,4 +94,10 @@ body {
 
   .content {
     width: 100vw;
+  }
+
+  #projectsGrid {
+    display: grid;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
