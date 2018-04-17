@@ -59,12 +59,29 @@ body {
 }
 
 .container {
-  background-image: url("./img/projectImage.jpg");
-  background-repeat: no-repeat;
-  height: 180px;
-  width: 100%;
+  height: 196px;
+  width: auto;
   display: block;
   margin: auto;
+}
+
+.card-title {
+  color: black;
+}
+
+#itemOne {
+  background-image: url("./img/projectImage.jpg");
+  object-fit: contain;
+}
+
+#itemTwo {
+  background-image: url("./img/alien_invasion.jpg");
+}
+
+#itemThree {
+  background-image: url("./img/memory_game.jpg");
+  height: 186px;
+  width: 100%;
 }
 
 .image {
