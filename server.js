@@ -1,17 +1,26 @@
+'use strict'
+
+// Server
+require('dotenv').config();
 const express = require('express');
+const app = express();
 const hbs = require('hbs');
 const fs = require('fs');
 const path = require('path');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
-require('dotenv').config();
 
-
+// Environment
+const ENV = process.env.NODE_ENV || 'development'
 const port = process.env.PORT || 3000;
-const app = express();
+const GMAIL_USER = process.env.GMAIL_USER
+const GMAIL_PASS = process.env.GMAIL_PASS
 
+// Packages
+const bodyParser = require('body-parser');
+const router = express.Router();
+const nodemailer = require('nodemailer');
+
+// Register Partials
 hbs.registerPartials(__dirname + '/views/partials');
-app.set('view engine', 'hbs');
 
 // Set public page for static components. Add npm dependencies
 
@@ -23,17 +32,19 @@ app.use(express.static(__dirname + '/node_modules/popper.js/dist/'));
 
 
 // Middleware
-
 // Does not call next(). Use for Maintenance to stop renders.
 //app.use((req, res, next) => {
 //  res.render('maintenance.hbs');
 //});
 
-app.use(bodyParser.urlencoded({extended: true}));
-
+// Helpers
 hbs.registerHelper('getCurrentYear', () => {
   return new Date().getFullYear()
 });
+
+// Routes
+app.set('view engine', 'hbs');
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
   res.render('home.hbs');
@@ -52,25 +63,27 @@ app.get('/contact', (req, res) => {
 });
 
 // POST route from contact form
-app.post('/contact', function (req, res) {
-  let mailOpts, smtpTrans;
+router.post('/', (req, res) => {
+  let mailOpts, smtpTrans
   smtpTrans = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
     secure: true,
     auth: {
-      user: process.env.GMAIL_USE,
-      pass: process.env.GMAIL_PASS,
+      user: GMAIL_USER,
+      pass: GMAIL_PASS
     }
   });
   mailOpts = {
     from: req.body.email + ' &lt;' + req.body.subject + '&gt;',
-    to: process.env.GMAIL_USER,
+    to: GMAIL_USER,
     subject: 'New message from contact form at stevendilbert.com',
     text: `${req.body.email} (${req.body.subject}) says: ${req.body.message}`
   };
-  smtpTrans.sendMail(mailOpts, function (error, response) {
+  smtpTrans.sendMail(mailOpts, (error) => {
     if (error) {
+      console.log('Failed contact form attempt: ')
+      console.log(mailOpts)
       res.render('contactFailure.hbs');
     }
     else {
