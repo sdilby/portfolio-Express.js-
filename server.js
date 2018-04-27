@@ -63,7 +63,7 @@ app.get('/contact', (req, res) => {
 });
 
 // POST route from contact form
-router.post('/', (req, res) => {
+app.post('/contact', (req, res) => {
   let mailOpts, smtpTrans
   smtpTrans = nodemailer.createTransport({
     host: 'smtp.gmail.com',

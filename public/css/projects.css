@@ -65,25 +65,39 @@ body {
   margin: auto;
 }
 
-.card-title {
-  color: black;
+hr {
+  width: 90%;
 }
 
 #itemOne {
-  background-image: url("./img/projectImage.jpg");
-  object-fit: contain;
+  background-image: url("./img/annielous.jpg");
+  background-size: 100% 100%;
 }
 
 #itemTwo {
-  background-image: url("./img/alien_invasion.jpg");
+  background-image: url("./img/alienInvasion.jpg");
+  background-size: 100% 100%;
 }
 
 #itemThree {
   background-image: url("./img/memory_game.jpg");
-  height: 186px;
-  width: 100%;
+  background-size: 100% 100%;
 }
 
+#itemFour {
+  background-image: url("./img/dataVis.jpg");
+  background-size: 100% 100%;
+}
+
+#itemFive {
+  background-image: url("./img/portfolio.jpg");
+  background-size: 100% 100%;
+}
+
+#itemSix {
+  background-image: url("./img/Learning_log.jpg");
+  background-size: 100% 100%;
+}
 .image {
   display: block;
   width: 100%;
